@@ -37,7 +37,7 @@
             <tr>
                 <th title = "Field #1">Date</th>
                 <th title = "Field #2">Time</th>
-                <th title = "Field #3">Statuss</th>
+                <th title = "Field #3">Status</th>
                 <th title = "Field #4">Temperature</th>
             </tr>
         </thead>
