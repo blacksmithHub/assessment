@@ -33,20 +33,34 @@
     </style>
 
     <table class = "m-datatable" id = "html_table" width = "100%">
-        <thead>
+        <thead style = "text-align:center">
             <tr>
-                <th title = "Field #1">Test</th>
-                <th title = "Field #1">Test</th>
+                <th title = "Field #1">Date</th>
+                <th title = "Field #2">Time</th>
+                <th title = "Field #3">Statuss</th>
+                <th title = "Field #4">Temperature</th>
             </tr>
         </thead>
         <tbody>
             @foreach($data['list'] as $item)
                 <tr>
                     <td>
-                        <img src = "http://openweathermap.org/img/w/{{ $item['weather'][0]['icon'] }}.png" alt = "">
+                        <center>
+                            {{ date("M d D", strtotime($item['dt_txt'])) }}
+                        </center>
                     </td>
                     <td>
-                        {{  }}
+                        <center>
+                            {{ date("g:m a", strtotime($item['dt_txt'])) }}
+                        </center>
+                    </td>
+                    <td>
+                        {{ $item['weather'][0]['description'] }} <img src = "http://openweathermap.org/img/w/{{ $item['weather'][0]['icon'] }}.png" width = "25" alt = "{{ $item['weather'][0]['description'] }}">
+                    </td>
+                    <td>
+                        <center>
+                        <span class="m-badge m-badge--danger m-badge--wide">{{ round((($item['main']['temp'] * 9/5 - 459.67) - 32) * 0.5556, 0) }}&deg;C</span> <span class="m-badge m-badge--info m-badge--wide">{{ round(($item['main']['temp'] * 9/5 - 459.67), 0) }}&deg;F</span>
+                        </center>
                     </td>
                 </tr>
             @endforeach

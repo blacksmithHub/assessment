@@ -49,11 +49,11 @@
 										</span>
 									</span>
 								</div>
-								<div id = "load" class="form-group m-form__group">
-									@include('data')
-								</div>
 							</div>
 						</div>
+					</div>
+					<div id = "load" class="form-group m-form__group">
+						@include('data')
 					</div>
 				</div>
 			</div>
