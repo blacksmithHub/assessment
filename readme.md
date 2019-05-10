@@ -1,1 +1,1 @@
-This simple web application which allow users to identify the temperature and weather. It provides a real time search bar to navigate easily.With its minimalist and responsive design that uses the Metronic template, users can access it in difference devices and browsers.
+This simple web application allow users to identify the temperature and weather. It provides a real time search bar to navigate easily.With its minimalist and responsive design that uses the Metronic template, users can access it in difference devices and browsers.
